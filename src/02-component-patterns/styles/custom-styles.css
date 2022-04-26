@@ -1,0 +1,16 @@
+.bg-dark{
+    background-color: rgb(55, 55, 55);
+}
+
+.text-white {
+    color: white;
+}
+.radius {
+    padding: 10px;
+    border-radius: 20px;
+    width: calc( 100% - 20px);
+}
+.border-white button, .border-white div{
+    border-color: white;
+    color: white;
+}

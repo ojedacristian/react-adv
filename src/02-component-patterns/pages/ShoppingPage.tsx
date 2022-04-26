@@ -1,8 +1,9 @@
 import { ProductButtons, ProductCard, ProductImage, ProductTitle } from '../components/';
+import '../styles/custom-styles.css'
 
 const product = {
   id: 1,
-  title:'coffee mug',
+  title: 'coffee mug',
   img: './coffee-mug.png'
 }
 
@@ -15,17 +16,32 @@ export const ShoppingPage = () => (
       flexDirection: 'row',
       flexWrap: 'wrap'
     }}>
-      
-      <ProductCard product={product}>
+
+      <ProductCard
+        style={{ background: '#1ab3cc' }}
+        product={product}
+        className='bg-dark'>
         <ProductCard.Image />
-        <ProductCard.Title title="nueva asdasd" />
-        <ProductButtons/>
+        <ProductCard.Title title="nueva asdasd" className='text-white' />
+        <ProductButtons style={{ background: '#1eb9ed' }}
+        />
       </ProductCard>
 
-      <ProductCard product={product}>
-        <ProductImage/>
-        <ProductTitle title=''/>
-        <ProductButtons />
+      <ProductCard
+        product={product}
+        style={{ background: '#1eb9ed' }}
+        className='bg-dark'>
+        <ProductImage
+          className='radius'
+        // style={{ width: '200px' }} 
+        />
+        <ProductTitle
+          title=''
+          className='text-white'
+          style={{ fontWeight: 'bold' }} />
+        <ProductButtons
+          style={{ fontWeight: 'bold' }}
+          className='border-white' />
       </ProductCard>
 
 
